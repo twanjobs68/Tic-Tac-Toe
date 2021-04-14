@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Welcome to Tic-Tac-Toe</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body bgcolor="gold">
+<!--- Welcome page --->
+	<div class="begnn">
+		<p>WELCOME TO TIC-TAC-TOE</p>
+		<p>***** LETS GET STARTED....<a href="/index.html">CLICK HERE!</p></a>
+
+	</div>
+
+          <!--Create grid for Welcome page game board-3x3-->
+   	    <div>
+	        <div class ="row">
+		        <div></div>
+		        <div></div>
+		        <div></div>
+		    </div>
+
+		    <div class ="row">
+		        <div></div>
+		        <div></div>
+		        <div></div>
+		    </div>
+
+		    <div class ="row">
+		        <div></div>
+		        <div></div>
+		        <div></div>
+		    </div>
+
+            <!--create start button and link start button to  game page
+            <div>
+               <button> onlclick<button>
+            </div>
+	    </div>
+
+        <br>
+
+        <div>
+            <p>Back to Welcome page..<a href="/myfirstgame.html">CLICK HERE!</a></p>
+
+	<script>app.js</script>
+</body>
+</html>
