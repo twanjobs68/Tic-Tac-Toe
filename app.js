@@ -5,7 +5,7 @@ function plan () {
 }
 plan();
 
-
-function inThis(sqr) {
+//*function added to alert user when a box has been clicked on*/
+function inthe(sqr) {
     alert("You put a letter here!!");
 }
