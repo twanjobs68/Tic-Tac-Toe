@@ -11,6 +11,50 @@
 	clear: both;
 }
 
+.row1 div{
+	padding: 10px;
+	border: 5px solid rgb(12, 0, 80);
+	height: 100px;
+	width: 100px;
+	float: left;
+	}
+
+.row1 {
+	clear: both;
+    }
+
+    .row2 div{
+        padding: 10px;
+        border: 5px solid rgb(141, 14, 109);
+        height: 100px;
+        width: 100px;
+        float: left;
+        }
+    
+    .row2{
+        clear: both;
+    }
+        .row3 div{
+            padding: 10px;
+            border: 5px solid rgb(29, 141, 14);
+            height: 100px;
+            width: 100px;
+            float: left;
+            }
+        
+        .row3 {
+            clear: both;
+        }
+/*#hpbox{
+    grid-template-areas: "row1",
+                          "row2"
+                          "row3";
+                          
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+}*/
+
 .begnn{
 	background-color: rgb(156, 53, 151);
 

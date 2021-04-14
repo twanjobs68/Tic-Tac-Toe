@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TIC-TAC-TOE</title>
+    <title>TIC-TAC-TOE GAME</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 
 <body>
-
+    
     <!--Things to do for  Page
         1-Create Game board*
         2- displays " Read Set Go"  at top of Welcome page*
@@ -20,41 +20,43 @@
         6- Add clicking sound when x or o placed on board
         7- Decorate Welcome page with X's and O's-->
 
-
+     <div>
     <h1 class="ml4">
-        <span class="letters letters-1">Ready</span>
-        <span class="letters letters-2">Set</span>
-        <span class="letters letters-3">Go!</span>
+        <span class="letters letters-1">Ready!</span>
+        <span class="letters letters-2"> Set!</span>
+        <span class="letters letters-3"> Go!</span>
       </h1>
-
-
+    </div>
 
 
       <!--Create grid for game board-3x3-->
+      <!-- you can also use the js keyword 'this' in the function brackets to call on the function parameter sqr-->
    	    <div>
 	        <div class ="row">
-		        <div></div>
-		        <div></div>
-		        <div></div>
+		        <div onclick="inThis(sqr)"></div>
+		        <div onclick="inThis(sqr)"></div>
+		        <div onclick="inThis(sqr)"></div>
 		    </div>
 
 		    <div class ="row">
-		        <div></div>
-		        <div></div>
-		        <div></div>
+		        <div onclick="inThis(sqr)"></div>
+		        <div onclick="inThis(sqr)"></div>
+		        <div onclick="inThis(sqr)"></div>
 		    </div>
 
 		    <div class ="row">
-		        <div></div>
-		        <div></div>
-		        <div></div>
+		        <div onclick="inThis(sqr)"></div>
+		        <div onclick="inThis(sqr)"></div>
+		        <div onclick="inThis(sqr)"></div>
 		    </div>
 	    </div>
 
         <br>
-
-        <div>
-            <p>Back to Welcome page..<a href="/myfirstgame.html">CLICK HERE!</a></p>
+        <!--Let player know what box they clicked on by pointing with arrow.-->
+     
+        
+    </div>
+            <p>Back to Welcome page <a href="/myfirstgame.html">CLICK HERE!</a></p>
 
 	<script>app.js</script>
 </body>
