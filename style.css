@@ -1,15 +1,16 @@
 /**********CSS style***/
 
-/* #head{
+.gamego{
     border: black;
-    background-color: purple;
-} */
+    background-color: gold;
+} 
 .row div{
 	padding: 10px;
 	border: 5px solid rgb(141, 14, 109);
 	height: 100px;
 	width: 100px;
 	float: left;
+    /*background-image: url(/Images/james-armes-waterfal.jpg);*/
 	}
 /*The clear property stops the boxes from floating on either side(left or right) of each other*/
 .row {
@@ -22,6 +23,7 @@
 	height: 100px;
 	width: 100px;
 	float: left;
+    
 	}
 /*The clear property stops the boxes from floating on either side(left or right) of each other*/
 .row1 {

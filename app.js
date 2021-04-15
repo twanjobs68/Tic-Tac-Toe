@@ -11,7 +11,6 @@
 //*function added to alert user when a box has been clicked on*/
 //* change function to check if O is in entered in square or and switch to x for next player turns*/
 var thePlayer= "o";
-console.log(thePlayer);
 function inthe(sqr) {
 
     /*alert("You put a letter here!!");*/
@@ -19,10 +18,11 @@ function inthe(sqr) {
     //*learned about ternary operator.  applying to this if statemnt*/
     /*This if statement checks to see if the square is not empty so that play may stop */
     /*so next player can take a Take a turn*/
-  /* if(sqr.innertText != "") return;*/
+   if(sqr.innertText != "") return;
    sqr.innerText = thePlayer;
+   console.log(sqr.innerText);
    //*add check for whats currently in the box clcked. if its an o then switch to x for next user to play */
-   /*else make it an O */
+   /*else make it an o */
     // if(thePlayer == "o") {
     //     thePlayer = "x";
       
