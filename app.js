@@ -30,11 +30,28 @@ function inthe(sqr) {
     // }/*simplified if statement using ternary opetator-if current player 'O', changed to 'X' otherwise set to 'O'*/
     thePlayer == "O" ? thePlayer = "X" : thePlayer = "O";
     
+
     // else{
     //     thePlayer == "O";
     // }
 }
-//*window prompt ask for players names and says hello at beginning of game but does it more than once-->
+    /*Find winner with 3 like squares* Test getElementById*/
+    /*check sauares to determine if three of them have same letter*/
+     var chckFirstSqr = document.getElementById("0_0");
+        /* alert(chckFirstSqr.innerText);*/
+    // function fndWinner(){
+    //             var chckFirstSqr = document.getElementById("0_0");
+    //             var chckSecdSqr = document.getElementById("1_0"); 
+    //             var chckThirdSqr = document.getElementById("2_0");
+
+    // /* make sure first box not empty before checking for winner*/
+    // if(chckFirstSqr == " ") return;
+    // if(chckFirstSqr == chckSecdSqr && chckFirstSqr == chckThirdSqr){
+    //             alert(chckThirdSqr + "'s" + " WINNER!!!");
+    //         }
+        
+    //     }
+//*EXTRA-window prompt ask for players names and says hello at beginning of game but does it more than once-->
 // function plyrs () {
 // var plyr1 = window.prompt("Player 1-Please Enter your name: "); alert("Hello: " + plyr1);
 // var plyr2 = window.prompt("Player 2-Please Enter your name: "); alert("Hello: " + plyr2);
