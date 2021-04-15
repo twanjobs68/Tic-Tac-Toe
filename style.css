@@ -13,6 +13,10 @@
     /*background-image: url(/Images/james-armes-waterfal.jpg);*/
 	}
 /*The clear property stops the boxes from floating on either side(left or right) of each other*/
+div1{
+    background-image: url(/Images/james-armes-waterfal.jpg);
+}
+
 .row {
 	clear: both;
 }
@@ -23,6 +27,7 @@
 	height: 100px;
 	width: 100px;
 	float: left;
+
     
 	}
 /*The clear property stops the boxes from floating on either side(left or right) of each other*/
