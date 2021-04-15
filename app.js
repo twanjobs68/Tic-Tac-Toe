@@ -38,7 +38,7 @@ function inthe(sqr) {
     
     fndWinner();
              }
-
+ 
             
     // else{
     //     thePlayer == "O";
@@ -50,19 +50,48 @@ function inthe(sqr) {
         // alert(chckFirstSqr.innerText);
         
      function fndWinner(){
-                 var chckFirstSqr = document.getElementById("0_0").innerText;
-                 var chckSecdSqr = document.getElementById("1_0").innerText; 
-                 var chckThirdSqr = document.getElementById("2_0").innerText;
+         //functionality added to count through each row on board till 3 of same letters(innerText) found in the row
+            for(letterCnt = 0; letterCnt <= 2; letterCnt++){
+                 var chckFirstSqr = document.getElementById("0_" + letterCnt).innerText;
+                 var chckSecndSqr = document.getElementById("1_" + letterCnt).innerText; 
+                 var chckThirdSqr = document.getElementById("2_" + letterCnt).innerText;
+            }
+                 for(letterCnt = 0; letterCnt <= 2; letterCnt++){
+                     var chckFirstSqr = document.getElementById(letterCnt + "0_").innerText;
+                    var chckSecndSqr = document.getElementById(letterCnt + "1_").innerText; 
+                     var chckThirdSqr = document.getElementById(letterCnt + "2_").innerText;
+                 }
+                
+
+                 if(chckFirstSqr == " ") {
+                     continue;
+                    }
+
     /* make sure first box not empty before checking for winner- Doesn't work like expected*/
           //  if(chckFirstSqr == " "){
 
-          //function to find 3 in a row by checking locating square,checking letter in square
+         //function to find 3 in a row by checking locating square,checking letter in square
         //and comparing 3 squares to see if equal and announce winner 
-                if(chckFirstSqr == chckSecdSqr && chckFirstSqr == chckThirdSqr){
-                alert(chckFirstSqr + " is" + " WIN!!!!!");
-                // alert("WINNER!!!");
+                if(chckFirstSqr == chckSecndSqr && chckFirstSqr == chckThirdSqr){
+                    /*Extra.  Instead of X wins, display player name and letter in parenthes "is Winner"*/
+                    alert(chckFirstSqr + "s WIN!!!!!");
+                     // alert("WINNER!!!");
                 }
-           // }
+           
+           //check letters diagnolly left to right then right to left for winner  
+           var chckFirstDiaLr = document.getElementById("0_0").innerText;
+           var chckSecndDiaLr = document.getElementById("1_1").innerText; 
+           var chckThirdDiaLr = document.getElementById("2_2").innerText;
+           if(chckFirstDiaLr != "" && chckFirstDiaLr == chckSecndDiaLr && chckFirstDiaLr == chckThirdDiaLr){
+                alert(chckFirstDiaLr + "s WIN!!!!")
+           }
+            
+           var chckFirstDiaRl = document.getElementById("0_2").innerText;
+           var chckSecndDiaRl = document.getElementById("1_1").innerText; 
+           var chckThirdDiaRl = document.getElementById("2_0").innerText;
+           if(chckFirstDiaRl != "" && chckFirstDiaRl == chckSecndDiaRl && chckFirstDiaRl == chckThirdDiaRl){
+                alert(chckFirstDiaRl + "s WIN!!!!")
+           }
         }
 
 
@@ -77,3 +106,21 @@ function inthe(sqr) {
 // var plyr2 = window.prompt("Player 2-Please Enter your name: "); alert("Hello: " + plyr2);
 // }
 // plyrs();
+//Testing ForEach******
+//input array of numbers
+//output array numbers greater than 
+///Test-Expect numbers GreterThan ten to equal 14,20,77
+var counter = 0
+var Array = []
+
+function NumsIn(testNumbers) {
+  testNumbers.forEach(number => {
+    if (number > 10) {
+      counter = number
+      Array.push(counter)
+    }
+    return 0
+  });
+  console.log(Array)
+}
+NumsIn([77, 7, 14, 3, 20])
