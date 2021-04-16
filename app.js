@@ -23,9 +23,9 @@
   var win = false;
   function inthe(sqr) {
            
-            if( sqr.innerText != "" || win) {
+            if( sqr.innerText != "" || win) 
                 return;
-            }
+            
          sqr.innerText = thePlayer; /*set square value to current player value of thePlayer -initally "O"*/
            /*if the square is not blank*/
          
@@ -58,9 +58,9 @@
                  document.getElementById("1_" + letterCnt).innerText,/*was chckSecndSqrR*/
                  document.getElementById("2_" + letterCnt).innerText); /*was chckThirdSqrR*/
      
-            //     if(chckFirstSqrR == " "){
-            //         continue;
-            //      }
+                 if(chckFirstSqrR == "")
+                     continue;
+                 
             //     // theWinner(chckFirstSqrR,chckSecndSqrR,chckThirdSqrR)
         
             //      }
@@ -74,8 +74,9 @@
            } 
        /* tried to use continue, break and return as read in w3 schools.//
     //  Need to understand how they work better. This continue does not work to check column empty*/
-    //  if(chckFirstSqr == " ") continue;{}
-    //     }
+                       if(chckFirstSqr == " ") 
+                           continue;
+    
     //* make sure first box not empty before checking for winner- Doesn't work like expected*/
     //  if(chckFirstSqr == " "){
 
@@ -89,7 +90,7 @@
         
               
     //check letters diagnolly left to right then right to left for winner  
-            theWinner(document.getElementById("0_0").innerText,/*was chckFirstDiaL*/
+            theWinner(document.getElementById("0_0").innerText,/*was chckFirstDiaLr*/
                       document.getElementById("1_1").innerText, /*was chckSecndDiaLr*/
                       document.getElementById("2_2").innerText);/*was chckThirdDiaLr*/
     
@@ -98,21 +99,21 @@
             // }
         
             theWinner(document.getElementById("0_2").innerText,/*was chckFirstDiaRl*/
-                     document.getElementById("1_1").innerText,/*was chckSecndDiaRl*/ 
-                     document.getElementById("2_0").innerText);/*was chckThirdDiaRl*/
+                      document.getElementById("1_1").innerText,/*was chckSecndDiaRl*/ 
+                      document.getElementById("2_0").innerText);/*was chckThirdDiaRl*/
+        
+                      //chamge this will process in function theWinner
             // if(chckFirstDiaLr != "" && chckFirstDiaRl == chckSecndDiaRl && chckFirstDiaRl == chckThirdDiaRl){
             //      alert(chckFirstDiaRl + "DiagRl WIN!!!!")
                  }
             
-        
-
         function theWinner(chckFirstSqr,chckSecndSqr,chckThirdSqr){
             if(chckFirstSqr != " " && chckFirstSqr == chckSecndSqr && chckFirstSqr == chckThirdSqr){
                 /*Extra.  Instead of X wins, display player name and letter in parenthes "is Winner"*/
                     alert(chckFirstSqr + "row WIN!!!!!");
                     win = true;
                 }
-        }
+            } 
 // *EXTRA-window prompt ask for players names and says hello at beginning of game but does it more than once-->
 // function plyrs () {
 // var plyr1 = window.prompt("Player 1-Please Enter your name: "); alert("Hello: " + plyr1);
