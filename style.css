@@ -4,19 +4,57 @@
     border: black;
     background-color: gold;
 } 
+
+h2{
+     
+   
+   
+
+}
+ h3{
+    display: inline;
+    text-align: right;
+    float: right; 
+
+}
+
+#h4{
+    display: inline;
+    text-align: left;
+    float: left;
+   
+
+}
+
+#gcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
 .row div{
-	padding: 10px;
+    display: grid;
+	padding: 5px;
 	border: 5px solid rgb(141, 14, 109);
+    background-color: ivory;
 	height: 100px;
 	width: 100px;
 	float: left;
-    /*background-image: url(/Images/james-armes-waterfal.jpg);*/
-	}
-/*The clear property stops the boxes from floating on either side(left or right) of each other*/
-div1{
-    background-image: url(/Images/james-armes-waterfal.jpg);
+    font-size: 6.5vw;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 8%;
+    
 }
-
+/* 
+.row div{
+    border-top: none;
+    border-left: none;
+} */
+    
+    
+	/*The clear property stops the boxes from floating on either side(left or right) of each other*/
 .row {
 	clear: both;
 }
@@ -24,10 +62,19 @@ div1{
 .row1 div{
 	padding: 10px;
 	border: 5px solid rgb(12, 0, 80);
+    background-color: ivory;
 	height: 100px;
 	width: 100px;
 	float: left;
-
+    font-size: 6.5vw;
+    text-align: center;
+    border-radius: 8%;
+    /* justify-content: center;
+    align-items: center; */
+    font-weight: 600;
+    
+    
+   /* background-image: url(/Images/james-armes-waterfal.jpg);*/
     
 	}
 /*The clear property stops the boxes from floating on either side(left or right) of each other*/
@@ -38,34 +85,36 @@ div1{
     .row2 div{
         padding: 10px;
         border: 5px solid rgb(141, 14, 109);
+        background-color: ivory;
         height: 100px;
         width: 100px;
         float: left;
+        font-size: 6.5vw;
+        text-align: center;
+        font-weight: 600;
+        border-radius: 8%;
         }
     
-    .row2{
+ .row2{
         clear: both;
     }
         .row3 div{
             padding: 10px;
             border: 5px solid rgb(29, 141, 14);
+            background-color: ivory;
             height: 100px;
             width: 100px;
             float: left;
+            font-size: 6.5vw;
+            text-align: center;
+            font-weight: 600;
+            border-radius: 8%;
             }
         
         .row3 {
             clear: both;
         }
-/*#hpbox{
-    grid-template-areas: "row1",
-                          "row2"
-                          "row3";
-                          
-        align-items: center;
-        justify-content: center;
-        align-content: center;
-}*/
+
 
 .begnn{
 	background-color: rgb(156, 53, 151);
@@ -84,4 +133,11 @@ div1{
 	top: 0.3em;
 	right: 0;
 	opacity: 0; 
+  }
+
+  /*cat photo proerties*/
+  #img1 {
+    display: none;
+    height: 200px;
+    width: 200px;
   }

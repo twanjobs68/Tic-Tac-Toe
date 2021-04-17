@@ -19,6 +19,7 @@
 //    }
 var thePlayer= "O"; 
     var win = false;
+    // var image = document.getElementById(cat1);
     function inthe(sqr) {
       
         
@@ -92,32 +93,52 @@ var thePlayer= "O";
               if(chckFirstDiaRl == "" || chckFirstDiaLr == "")
                    continue;
                
-            } //End function findthree
+            } //End Diag cjecl
             diagWins(chckFirstDiaRl,chckSecndDiaRl,chckThirdDiaRl);  
         //  need to create function theWinner(chckFirstSqr,chckSecndSqr,chckThirdSqr) to combine if statemetns{
         //removed bracket
-    
+
+        //if no winner of the game, display picture of cat on screen-needs to cover entire game board//
+        for(letterCnt = 0; letterCnt <= 2; letterCnt++){
+              if( win = false){
+                  noWinner(win);//pass false to no winner function//
+              } 
+        } 
         //****************Functions to check for Winner *//
             function rowColWins(){
                 if(chckFirstSqr == chckSecndSqr && chckFirstSqr == chckThirdSqr){
                     alert("WINNER!!!!!");
                     win = true;
+                    
                 }
+                 else{
+                     win = false;
+                 }
             }
 
             function diagWins(){
 
                 if((chckFirstDiaLr != "" && chckFirstDiaLr == chckSecndDiaLr && chckFirstDiaLr == chckThirdDiaLr)
                     || (chckFirstDiaRl != "" && chckFirstDiaRl == chckSecndDiaRl && chckFirstDiaRl == chckThirdDiaRl)){
-                        alert("WINNER!!!!!");
-                         win = true;
-                         console.log("In diag wins function")
+                     alert("DIAGNOL WINNER!!!!!");
+                        win = true;
                     }
+                    else{
+                         win = false;
+                }
            }
-           
-           
+
+            function noWinner(){
+                 if(win = false ){
+                       alert("NO WINNER");
+        //    Display immage of cat over board  image.style.display = 'block';
+               }
+           }    
             
         }
-            //  need to create function theWinner(chckFirstSqr,chckSecndSqr,chckThirdSqr) to combine if statemetns{
+            // Issue: Game doesnt end with popup winner.  Need code to stop players from entering
+            // letters after winner is proclaimed//
+            //Center Game board on page
+            //Extra-Change color of winning letters to red or flash and back to black or stable.*/
               
       

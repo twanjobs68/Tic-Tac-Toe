@@ -7,9 +7,7 @@
     <title>TIC-TAC-TOE GAME</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
-
-<body>
+<body bgcolor="green">
     
     <!--Things to do for  Page
         1-Create Game board for home page- 3x3 board and add color to lines for board
@@ -34,30 +32,42 @@
         15.  Add clicking sound when x or o placed on board
         16.  Decorate Welcome page with X's and O's-->
 
-     <div>
-    <h1 class="gamego">
-        <span class=" letters-1">Ready!</span>
-        <span class=" letters-2"> Set!</span>
-        <span class=" letters-3"> Go!</span>
-      </h1>
-    </div>
+        <div>
+          <h1 class="gamego">
+              <span class=" letters-55">Ready!</span>
+              <span class=" letters-3"> Set!</span>
+              <span class=" letters-2"> Go!</span>
+              <center>****MS TWANS TIC-TAC-TOE****</center> <!--why does this work?-->
+           </h1>
+        </div>
+       
+        <div>
+            <h3>
+                <span>HOME? <a href="/myfirstgame.html">CLICK <strong>HERE!</strong></a></span>
+            </h3>
 
+                <h4>
+                    <span>RESET GAME! <a href="/index.html">CLICK <strong>HERE!</strong></a></h3></span>
+                </h4>
+            </div>
+               
 
       <!--Create boxes for the game board-3x3-->
       <!-- you can also use the js keyword 'this' in the function brackets to call on the function parameter sqr-->
       <!-- determine how to recognize winner by checking square values. Use coordnates to locate box value-->
-   	    <div>
-
+   	    <div id ="gcontainer">
+            
 	        <div class ="row">
 		        <div id="0_0" onclick="inthe(this)"></div>
-		        <div id="1_0" onclick="inthe(this)"></div>
+		        <div id="1_0" onclick="inthe(this)"></div> 
 		        <div id="2_0" onclick="inthe(this)"></div>
                 
 		    </div>
 
 		    <div class ="row">
+                
 		        <div id="0_1" onclick="inthe(this)"></div>
-		        <div id="1_1" onclick="inthe(this)"></div>
+		        <div id="1_1" onclick="inthe(this)"></div> 
 		        <div id="2_1" onclick="inthe(this)"></div>
 		    </div>
 
@@ -66,17 +76,18 @@
 		        <div id="1_2" onclick="inthe(this)"></div>
 		        <div id="2_2" onclick="inthe(this)"></div>
 		    </div>
-	    </div>
-
-        <br>
-        <!--Add function to Let player know what box they clicked on by pointing with arrow.-->
-     
+                 
+                 
+	        </div>
         
-    </div>
-            <p>RESET GAME! <a href="/index.html">CLICK <strong>HERE!</strong></a></p>
-            <p><a href="/myfirstgame.html">GO TO HOME PAGE!</a></p>
-
-
+        </div>
+            
+          
+       <!-- <div>
+            /*- <img src="/Images/humvee.jpg" width="100" height="100" /
+            <h1>Image:</h1>
+             <img id="cat1" src="/Images/tictactoecat.jpg">
+       </div> -->
 
 
             <script src="app.js"></script>
