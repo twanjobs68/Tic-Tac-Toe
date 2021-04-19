@@ -5,26 +5,35 @@
     background-color: gold;
 } 
 
-h2{
-     
-   
-   
 
-}
+h2 a:hover{ 
+    color:orangered;
+} 
+     
+
  h3{
     display: inline;
     text-align: right;
-    float: right; 
+    float: right;
+    
 
 }
+
+h3 a:hover{
+ color: gold; 
+}
+
 
 #h4{
     display: inline;
     text-align: left;
     float: left;
-   
 
 }
+
+h4 a:hover{
+    color: gold; 
+   }
 
 #gcontainer{
     display: flex;
@@ -34,7 +43,7 @@ h2{
     align-content: center;
 }
 .row div{
-    display: grid;
+    
 	padding: 5px;
 	border: 5px solid rgb(141, 14, 109);
     background-color: ivory;
@@ -46,12 +55,18 @@ h2{
     text-align: center;
     border-radius: 8%;
     
+    
 }
-/* 
-.row div{
-    border-top: none;
-    border-left: none;
-} */
+
+.myimgs
+    { display: flex;
+      background-color: white; 
+      border: 20% solid purple;
+      justify-content: space-between;
+      border: 10% solid black;
+      
+      box-shadow: 5px 5px 5px 5px black;
+    }
     
     
 	/*The clear property stops the boxes from floating on either side(left or right) of each other*/
@@ -61,16 +76,15 @@ h2{
 
 .row1 div{
 	padding: 10px;
-	border: 5px solid rgb(12, 0, 80);
+	border: 7px solid rgb(12, 0, 80);
     background-color: ivory;
+    color:purple;
 	height: 100px;
 	width: 100px;
 	float: left;
     font-size: 6.5vw;
     text-align: center;
-    border-radius: 8%;
-    /* justify-content: center;
-    align-items: center; */
+    border-radius: 10%;
     font-weight: 600;
     
     
@@ -84,15 +98,16 @@ h2{
 
     .row2 div{
         padding: 10px;
-        border: 5px solid rgb(141, 14, 109);
+        border: 7px solid rgb(141, 14, 109);
         background-color: ivory;
+        color: gold;
         height: 100px;
         width: 100px;
         float: left;
         font-size: 6.5vw;
         text-align: center;
         font-weight: 600;
-        border-radius: 8%;
+        border-radius: 10%;
         }
     
  .row2{
@@ -100,15 +115,16 @@ h2{
     }
         .row3 div{
             padding: 10px;
-            border: 5px solid rgb(29, 141, 14);
+            border: 7px solid rgb(29, 141, 14);
             background-color: ivory;
+            color: purple;
             height: 100px;
             width: 100px;
             float: left;
             font-size: 6.5vw;
             text-align: center;
             font-weight: 600;
-            border-radius: 8%;
+            border-radius: 10%;
             }
         
         .row3 {
@@ -133,11 +149,4 @@ h2{
 	top: 0.3em;
 	right: 0;
 	opacity: 0; 
-  }
-
-  /*cat photo proerties*/
-  #img1 {
-    display: none;
-    height: 200px;
-    width: 200px;
   }

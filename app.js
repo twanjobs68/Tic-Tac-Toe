@@ -19,7 +19,7 @@
 //    }
 var thePlayer= "O"; 
     var win = false;
-    // var image = document.getElementById(cat1);
+    // Set first player letter to 'O'
     function inthe(sqr) {
       
         
@@ -36,8 +36,9 @@ var thePlayer= "O";
          
          thePlayer == "O" ? thePlayer = "X" : thePlayer = "O";
         
-         fndThree();/*function that checks for 3 x'x or 3 o's in a row or colunmn*/
-         }//End function inthe()
+         fndThree();  /*make call to function to check for winners.  No parameters to pass*/
+    }/*function that checks for 3 x'x or 3 o's in a row or colunmn*/
+         //End function inthe()
          // else{
     //     thePlayer == "O";
     // }
@@ -53,87 +54,130 @@ var thePlayer= "O";
          //simplified variable usage by passing the getElementId calls//
          //as arguments to the functions and removing variable names. w3 mentions using counter to get row. Code academy.  
          /*Find way to use it simplify checking rows for winner*/ /*Use Grid Garden as ref for coordinates*/
+         /*******************ROWS***************************** */
              for(letterCnt = 0; letterCnt <= 2; letterCnt++){
                 /*USE COUNTER TO LOOP THROUGH THE ROW FOR EACH SQUARE/BOX*3x*/
-                var chckFirstSqr = document.getElementById("0_" + letterCnt).innerText;/*was chckFirstSqrR*/
-                var chckSecndSqr = document.getElementById("1_" + letterCnt).innerText;/*was chckSecndSqrR */ 
-                var chckThirdSqr = document.getElementById("2_" + letterCnt).innerText;/*was chckThirdSqrR*/
+                var chckFirstSqrR = document.getElementById("0_" + letterCnt).innerText;/*was chckFirstSqrR*/
+                var chckSecndSqrR = document.getElementById("1_" + letterCnt).innerText;/*was chckSecndSqrR */ 
+                var chckThirdSqrR = document.getElementById("2_" + letterCnt).innerText;/*was chckThirdSqrR*/
                 
-                if(chckFirstSqr == "")
+                if(chckFirstSqrR == "")
                    continue;
-                rowColWins(chckFirstSqr,chckSecndSqr,chckThirdSqr);
+                rowWins(chckFirstSqrR,chckSecndSqrR,chckThirdSqrR);
              }
-             //Check column for winner-find a way to use counter(w3)
+             //Check COLUMNS for winner-find a way to use counter(w3)
              for(letterCnt = 0; letterCnt <= 2; letterCnt++){
-                var chckFirstSqr = document.getElementById(letterCnt + "_0").innerText;/*was chckFirstSqrC*/
-                var chckSecndSqr = document.getElementById(letterCnt + "_1").innerText;/*was chckSecndSqrC*/
-                var chckThirdSqr = document.getElementById(letterCnt + "_2").innerText; /*was chckThirdSqrC*/
+                var chckFirstSqrC = document.getElementById(letterCnt + "_0").innerText;/*was chckFirstSqrC*/
+                var chckSecndSqrC = document.getElementById(letterCnt + "_1").innerText;/*was chckSecndSqrC*/
+                var chckThirdSqrC = document.getElementById(letterCnt + "_2").innerText; /*was chckThirdSqrC*/
 
-                if(chckFirstSqr == "")
+                if(chckFirstSqrC == "")
                    continue;
-                rowColWins(chckFirstSqr,chckSecndSqr,chckThirdSqr);
+                colWins(chckFirstSqrC,chckSecndSqrC,chckThirdSqrC);
              } 
              //Check Diagnolly for a winner
               
-             //check letters diagnolly left to right then right to left for winner don't forget counter as coordinate/W3 
+             //*check letters DIAGONALLY left to right for winner. don't forget counter as coordinate/W3 
              //change diagnol varibles to be able to use the row and colum function
             for(letterCnt = 0; letterCnt <= 2; letterCnt++){
               var chckFirstDiaLr = document.getElementById("0_0").innerText;/*was chckFirstDiaLr*/
               var chckSecndDiaLr = document.getElementById("1_1").innerText; /*was chckSecndDiaLr*/
               var chckThirdDiaLr = document.getElementById("2_2").innerText;/*was chckThirdDiaLr*/
 
-            //   if(chckFirstDiaLr == "")
-            //        continue;
-              //if(chckFirstDiaLr != " " && chckFirstDiaLr== chckSecndDiaLr && chckFirstDiaLr == chckThirdDiaLr){
-             //##   diagWins(chckFirstDiaLr,chckSecndDiaLr,chckThirdDiaLr); 
-              var chckFirstDiaRl = document.getElementById("2_0").innerText;/*was chckFirstDiaRl*/
-              var chckSecndDiaRl = document.getElementById("1_1").innerText;/*was chckSecndDiaRl*/ 
-              var chckThirdDiaRl = document.getElementById("0_2").innerText;/*was chckThirdDiaRl*/
+              if(chckFirstDiaLr == "")
+                    continue;
               
-              if(chckFirstDiaRl == "" || chckFirstDiaLr == "")
+              }
+              diagLrWins(chckFirstDiaLr,chckSecndDiaLr,chckThirdDiaLr); 
+              //*check letters DIAGONALLY right to left for winner
+            for(letterCnt = 0; letterCnt <= 2; letterCnt++){
+               var chckFirstDiaRl = document.getElementById("2_0").innerText;/*was chckFirstDiaRl*/
+               var chckSecndDiaRl = document.getElementById("1_1").innerText;/*was chckSecndDiaRl*/ 
+               var chckThirdDiaRl = document.getElementById("0_2").innerText;/*was chckThirdDiaRl*/
+              
+               if(chckFirstDiaLr == "")
                    continue;
                
             } //End Diag cjecl
-            diagWins(chckFirstDiaRl,chckSecndDiaRl,chckThirdDiaRl);  
+            diagRlWins(chckFirstDiaRl,chckSecndDiaRl,chckThirdDiaRl);  
         //  need to create function theWinner(chckFirstSqr,chckSecndSqr,chckThirdSqr) to combine if statemetns{
         //removed bracket
 
         //if no winner of the game, display picture of cat on screen-needs to cover entire game board//
-        for(letterCnt = 0; letterCnt <= 2; letterCnt++){
-              if( win = false){
-                  noWinner(win);//pass false to no winner function//
-              } 
-        } 
+        
+         
         //****************Functions to check for Winner *//
-            function rowColWins(){
-                if(chckFirstSqr == chckSecndSqr && chckFirstSqr == chckThirdSqr){
-                    alert("WINNER!!!!!");
+            function rowWins(){
+                if(chckFirstSqrR== chckSecndSqrR && chckFirstSqrR == chckThirdSqrR){
+                    chckFirstSqrR = document.getElementById("0_" + letterCnt).innerText = "W";/*was chckFirstSqrR*/
+                    chckSecndSqrR = document.getElementById("1_" + letterCnt).innerText = "W";/*was chckSecndSqrR*/ 
+                    chckThirdSqrR = document.getElementById("2_" + letterCnt).innerText = "W";/*was chckThirdSqrR*/
+                    alert("ROW WINS!!!!!");
                     win = true;
                     
                 }
-                 else{
-                     win = false;
-                 }
             }
 
-            function diagWins(){
-
-                if((chckFirstDiaLr != "" && chckFirstDiaLr == chckSecndDiaLr && chckFirstDiaLr == chckThirdDiaLr)
-                    || (chckFirstDiaRl != "" && chckFirstDiaRl == chckSecndDiaRl && chckFirstDiaRl == chckThirdDiaRl)){
-                     alert("DIAGNOL WINNER!!!!!");
-                        win = true;
-                    }
-                    else{
-                         win = false;
+            function colWins(){
+                if(chckFirstSqrC== chckSecndSqrC && chckFirstSqrC == chckThirdSqrC){
+                    
+                    chckFirstSqrC = document.getElementById(letterCnt + "_0").innerText = "W";/*was chckFirstSqrC*/
+                    chckSecndSqrC = document.getElementById(letterCnt + "_1").innerText = "W";/*was chckSecndSqrC*/ 
+                    chckThirdSqrC = document.getElementById(letterCnt + "_2").innerText = "W";/*was chckThirdSqrC*/
+                    alert("COLUMN WINS!!!!!");
+                    win = true;
                 }
-           }
+                
+            }
 
+            function diagLrWins(){
+                if(chckFirstDiaLr != "" && chckFirstDiaLr == chckSecndDiaLr && chckFirstDiaLr == chckThirdDiaLr){
+                    chckFirstDiaLr = document.getElementById("0_0").innerText  = "W";/*was chckFirstDiaLr*/
+                    chckSecndDiaLr = document.getElementById("1_1").innerText  = "W"; /*was chckSecndDiaLr*/
+                    chckThirdDiaLr = document.getElementById("2_2").innerText  = "W";/*was chckThirdDiaLr*/                 
+                     alert("DIAGNOL WINNER!!!!!");
+                     win = true;
+                    }
+                    
+                }
+
+                function diagRlWins(){
+                    if(chckFirstDiaRl != "" && chckFirstDiaRl == chckSecndDiaRl && chckFirstDiaRl == chckThirdDiaRl)
+                        {
+                        chckFirstDiaRl = document.getElementById("2_0").innerText  = "W";/*was chckFirstDiaRl*/
+                        chckSecndDiaRl = document.getElementById("1_1").innerText  = "W";/*was chckSecndDiaRl*/ 
+                        chckThirdDiaRl = document.getElementById("0_2").innerText  = "W";/*was chckThirdDiaRl*/
+                         alert("DIAGNOL WINNER!!!!!");
+                         win = true;}
+                         else{
+                            
+                             noWinner();
+                         
+                         
+                        }
+                       console.log(win)
+                    }
+                        
+            
+              
             function noWinner(){
+                
+                 console.log("inside functinn noWinner")
                  if(win = false ){
-                       alert("NO WINNER");
-        //    Display immage of cat over board  image.style.display = 'block';
-               }
-           }    
+                    chckFirstSqrR = document.getElementById("0_0").innerText = "D";/*was chckFirstSqrR*/
+                    chckSecndSqrR = document.getElementById("1_0").innerText = "D";/*was chckSecndSqrR*/ 
+                    chckThirdSqrR = document.getElementById("2_0").innerText = "D";/*was chckThirdSqrR*/
+                    chckFirstSqrC = document.getElementById("0_1").innerText = "D";/*was chckFirstSqrC*/
+                    chckFirstSqrC = document.getElementById("1_1").innerText = "D";/*was chckSecndSqrC*/ 
+                    chckThirdSqrC = document.getElementById("2_1").innerText = "D";/*was chckThirdSqrC*/
+                    chckFirstDiaRl = document.getElementById("0_2").innerText  = "D";/*was chckFirstDiaLr*/
+                    chckFirstDiaRl = document.getElementById("1_2").innerText  = "D"; /*was chckSecndDiaLr*/
+                    chckFirstDiaRl = document.getElementById("2_2").innerText  = "D";/*was chckThirdDiaLr*/ 
+                    alert("NO WINNER");
+                    
+                   //    Display immage of cat over board  image.style.display = 'block';
+                 }
+            }    
             
         }
             // Issue: Game doesnt end with popup winner.  Need code to stop players from entering
