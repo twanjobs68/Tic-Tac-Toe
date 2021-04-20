@@ -4,23 +4,33 @@
     border: black;
     background-color: gold;
 } 
+p{
+    display: flex;
+    justify-content: space-around;
+    align-items: right;
+    align-content: right;
+}
+h1{
+    border: black;
+    box-shadow: 5px 5px 5px 5px black;
+    height: 70px;
+     border-radius:15px 15px 15px 15px 
+}
 
-
-h2 a:hover{ 
+h2 a:hover{border: mintcream;
     color:orangered;
 } 
      
 
- h3{
+h3{
     display: inline;
     text-align: right;
     float: right;
-    
-
 }
 
 h3 a:hover{
- color: gold; 
+   color: gold; 
+ 
 }
 
 
@@ -61,12 +71,28 @@ h4 a:hover{
 .myimgs
     { display: flex;
       background-color: white; 
-      border: 20% solid purple;
       justify-content: space-between;
       border: 10% solid black;
-      
+      padding: 1px;
       box-shadow: 5px 5px 5px 5px black;
+      
+    
     }
+ 
+.myimgs2
+    { 
+      background-color: white; 
+      justify-content: space-evenly;
+      border:10% solid black;
+      padding: 1px;
+      float: right;
+      align-items: right;
+      align-content: right;
+      box-shadow: 15px 5px 5px 5px black;
+      
+    }
+
+    
     
     
 	/*The clear property stops the boxes from floating on either side(left or right) of each other*/
@@ -78,7 +104,7 @@ h4 a:hover{
 	padding: 10px;
 	border: 7px solid rgb(12, 0, 80);
     background-color: ivory;
-    color:purple;
+    color: purple;
 	height: 100px;
 	width: 100px;
 	float: left;
@@ -133,7 +159,12 @@ h4 a:hover{
 
 
 .begnn{
-	background-color: rgb(156, 53, 151);
+	background-color: rgb(112, 26, 105);
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 15px 5px 5px 5px black;
+    
+    
+    
 
 }
 
