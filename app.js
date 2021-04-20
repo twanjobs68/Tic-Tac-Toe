@@ -12,7 +12,7 @@ var win = false;
 // Set first player letter to 'O'
 function inthe(sqr) {
 
-
+    //*check to see if the square is not empty.  If its not then stop the fucntion to preven the letter for being changed*/
     if (sqr.innerText != "")
         return;
     sqr.innerText = thePlayer;
