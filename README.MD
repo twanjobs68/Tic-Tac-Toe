@@ -9,7 +9,7 @@ INSTRUCTIONS:  2 Player Game. Decide how many games(rounds) will be <br> played.
 
 Game written using HTML, CSS and Javascript technologies.
 
-Unsolved problems:
+Unsolved:
 
 1. Game does not halt after winner is proclaimed.  User is able to fill in blank spaces with continuing play letters
-2. Game does not check for Draw  game.
+2. If 2 diagonal winners, game will display diagonal win and no winner.  
