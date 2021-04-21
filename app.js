@@ -6,7 +6,7 @@
 //Home page should not be interactive but contain link to go to game page(add picutes)
 //Game page interactive 
 //"Colorful game(maybe pictures)"
-
+var cntr = 0;
 var thePlayer = "O";
 var win = false;
 // Set first player letter to 'O'
@@ -18,7 +18,7 @@ function inthe(sqr) {
     sqr.innerText = thePlayer;
     /*if the square is not blank*/
     // }/*simplified if statement using ternary opetator-if current player 'O', changed to 'X' otherwise set to 'O'*/
-
+    cntr++;
     thePlayer == "O" ? thePlayer = "X" : thePlayer = "O";
 
     fndThree(); /*make call to function to check for winners.  No parameters to pass*/
@@ -82,26 +82,25 @@ function fndThree() {
     diagRlWins(chckFirstDiaRl, chckSecndDiaRl, chckThirdDiaRl);
     //  need to create function theWinner(chckFirstSqr,chckSecndSqr,chckThirdSqr) to combine if statemetns{
     //removed bracket
+     console.log(cntr)
+    //////////////////////////Checks to see if game is a draw-no 3 in a row wins//////////////////////////
+   
+      if(cntr == 9){
+        chckFirstSqrR = document.getElementById("0_0").innerText = "D"; /*was chckFirstSqrR*/
+        chckSecndSqrR = document.getElementById("1_0").innerText = "D"; /*was chckSecndSqrR*/
+        chckThirdSqrR = document.getElementById("2_0").innerText = "D"; /*was chckThirdSqrR*/
+        chckFirstSqrC = document.getElementById("0_1").innerText = "D"; /*was chckFirstSqrC*/
+        chckFirstSqrC = document.getElementById("1_1").innerText = "D"; /*was chckSecndSqrC*/
+        chckThirdSqrC = document.getElementById("2_1").innerText = "D"; /*was chckThirdSqrC*/
+        chckFirstDiaRl = document.getElementById("0_2").innerText = "D"; /*was chckFirstDiaLr*/
+        chckFirstDiaRl = document.getElementById("1_2").innerText = "D"; /*was chckSecndDiaLr*/
+        chckFirstDiaRl = document.getElementById("2_2").innerText = "D"; /*was chckThir*/
+         alert("DRAW GAME!! NO WINNER");
+         
 
-    //////////////////////////////Doesn't work properly////////?????????///////////////////////////////////
-    // // if no winner of the game, display picture of cat on screen-needs to cover entire game board//
-    // for (letterCnt=0; letterCnt < 10; letterCnt++){
-    //     chckFirstSqrR = document.getElementById("0_0").innerText = "D"; /*was chckFirstSqrR*/
-    //     chckSecndSqrR = document.getElementById("1_0").innerText = "D"; /*was chckSecndSqrR*/
-    //     chckThirdSqrR = document.getElementById("2_0").innerText = "D"; /*was chckThirdSqrR*/
-    //     chckFirstSqrC = document.getElementById("0_1").innerText = "D"; /*was chckFirstSqrC*/
-    //     chckFirstSqrC = document.getElementById("1_1").innerText = "D"; /*was chckSecndSqrC*/
-    //     chckThirdSqrC = document.getElementById("2_1").innerText = "D"; /*was chckThirdSqrC*/
-    //     chckFirstDiaRl = document.getElementById("0_2").innerText = "D"; /*was chckFirstDiaLr*/
-    //     chckFirstDiaRl = document.getElementById("1_2").innerText = "D"; /*was chckSecndDiaLr*/
-    //     chckFirstDiaRl = document.getElementById("2_2").innerText = "D"; /*was chckThir*/
-    //     if (chckFirstDiaLr == "" && letterCnt >=9)
-    //     continue;
-    // }
-    
-    //  noWinner(win,chckFirstDiaRl,chckSecndDiaRl,chckThirdDiaRl,chckFirstSqrR,chckSecndSqrR,
-    //          chckThirdSqrR,chckFirstSqrC,chckSecndSqrC,chckThirdSqrC);
-    
+    }
+   
+        
       
     //****************Functions to check for Winner *//
     function rowWins() {
@@ -148,28 +147,6 @@ function fndThree() {
             alert("DIAGNOL WINNER!!!!!");
             win = true;
         }
-
-    }
-
-
-
-    function noWinner() {
-
-        console.log("inside function noWinner")
-        console.log(win)
-
-        chckFirstSqrR = document.getElementById("0_0").innerText = "D"; /*was chckFirstSqrR*/
-        chckSecndSqrR = document.getElementById("1_0").innerText = "D"; /*was chckSecndSqrR*/
-        chckThirdSqrR = document.getElementById("2_0").innerText = "D"; /*was chckThirdSqrR*/
-        chckFirstSqrC = document.getElementById("0_1").innerText = "D"; /*was chckFirstSqrC*/
-        chckFirstSqrC = document.getElementById("1_1").innerText = "D"; /*was chckSecndSqrC*/
-        chckThirdSqrC = document.getElementById("2_1").innerText = "D"; /*was chckThirdSqrC*/
-        chckFirstDiaRl = document.getElementById("0_2").innerText = "D"; /*was chckFirstDiaLr*/
-        chckFirstDiaRl = document.getElementById("1_2").innerText = "D"; /*was chckSecndDiaLr*/
-        chckFirstDiaRl = document.getElementById("2_2").innerText = "D"; /*was chckThirdDiaLr*/
-        alert("NO WINNER");
-
-        //    Display immage of cat over board  image.style.display = 'block';
 
     }
 
